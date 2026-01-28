@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Borrowed History</h2>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Borrowed At</th>
+    </tr>
+    {% for b in borrowed %}
+    <tr>
+        <td>{{ b.id }}</td>
+        <td>{{ b.username }}</td>
+        <td>{{ b.title }}</td>
+        <td>{{ b.author }}</td>
+        <td>{{ b.borrowed_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
